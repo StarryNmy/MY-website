@@ -1,8 +1,9 @@
 # 学术个人主页 · Academic Homepage
 
-一个简洁美观的研究生个人主页模板，支持 GitHub Pages 一键部署。
+<!-- 一个简洁美观的研究生个人主页模板，支持 GitHub Pages 一键部署。 -->
+Hope to update more news about me! ✨✨✨
 
-## ✨ 功能特性
+<!-- ## ✨ 功能特性
 
 - **关于我** — 头像、个人简介、研究方向标签、简历下载
 - **最新动态** — 时间轴展示近期学术事件
@@ -57,8 +58,8 @@ https://<username>.github.io
 | 联系方式 | `index.html` | `#contact` section |
 | 主题色（蓝色 `#2563eb`）| `css/style.css` | `:root` 变量 `--c-accent` |
 | 头像 | `assets/avatar.jpg` | 直接替换文件 |
-| 简历 | `assets/cv.pdf` | 直接替换文件 |
+| 简历 | `assets/cv.pdf` | 直接替换文件 | -->
 
-## 📄 License
+<!-- ## 📄 License
 
-MIT
+MIT -->
