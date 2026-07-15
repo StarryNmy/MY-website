@@ -502,7 +502,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* 移动端适配 */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .paper-card {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -808,6 +808,107 @@ img { display: block; max-width: 100%; }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ─────────────────────────────────────────
+Research Grid (Compact)
+───────────────────────────────────────── */
+.research-grid {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--c-border);
+}
+
+.research-grid h3 {
+  grid-column: 1 / -1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--c-text);
+}
+
+/* 网格布局：默认3列 */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* 单个研究项 */
+.research-item {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  padding: 0.9rem;
+  transition: all var(--transition);
+}
+
+.research-item:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 2px 8px rgba(37,99,235,.08);
+  transform: translateY(-1px);
+}
+
+.research-item-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.research-item-desc {
+  font-size: 0.75rem;
+  color: var(--c-muted);
+  line-height: 1.55;
+  margin-bottom: 0.7rem;
+}
+
+/* 研究图片 - 上下排列并居中 */
+.research-item-images img {
+  width: 100%;              /* ✅ 占满容器宽度 */
+  max-width: 200px;         /* ✅ 限制最大宽度 */
+  height: auto;             /* ✅ 高度自适应，保持比例 */
+  object-fit: contain;      /* ✅ 完整显示图片，不裁剪 */
+  border-radius: 4px;
+  border: 1px solid var(--c-border);
+  background: var(--c-bg);
+  display: block;           /* ✅ 防止底部间隙 */
+}
+
+/* 同时确保容器不会限制图片 */
+.research-item-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.7rem;
+  /* 移除可能的 overflow: hidden */
+}
+
+/* 响应式：平板2列 */
+@media (max-width: 1024px) {
+  .research-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 响应式：手机1列 */
+@media (max-width: 600px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .research-item-images img {
+    height: 90px;  /* 手机端稍大一点 */
+  }
+}
+
+/* 如果只有2个研究项，平均分配 */
+.research-grid:has(.research-item:nth-child(2):nth-last-child(1)) {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 
 /* ─────────────────────────────────────────
    Responsive
