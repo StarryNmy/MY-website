@@ -321,10 +321,10 @@ img { display: block; max-width: 100%; }
   color: var(--c-muted);
 }
 
-.affil-item + .affil-item::before {
+/* .affil-item + .affil-item::before {
   content: '·';
   margin-right: 1rem;
-}
+} */
 
 .bio-text {
   font-size: 0.95rem;
